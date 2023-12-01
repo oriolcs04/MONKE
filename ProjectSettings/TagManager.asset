@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Mage
+  - Animal
+  - NPC
+  - Ogre
+  - Heal
+  - Weapons
   layers:
   - Default
   - TransparentFX
