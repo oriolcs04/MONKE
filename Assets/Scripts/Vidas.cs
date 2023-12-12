@@ -93,6 +93,11 @@ public class VidasP : MonoBehaviour
                 HurtwithMage();
                 Debug.Log("Hurt with Mage");
             }
+            else if (collision.gameObject.CompareTag("Bullet"))
+            {
+                Hurt();
+                Debug.Log("Hurt with bullet");
+            }
             else if (collision.gameObject.CompareTag("Ogre"))
             {
                 HurtwithOgre();
@@ -111,7 +116,7 @@ public class VidasP : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Heal"))// && vidas < 7)
+        if (other.gameObject.CompareTag("Heal") && vidas < 7)
         {
             Debug.Log("ASDASD");
             IncrementarVidas();

@@ -10,6 +10,7 @@ TagManager:
   - Ogre
   - Heal
   - Weapons
+  - Bullet
   layers:
   - Default
   - TransparentFX
