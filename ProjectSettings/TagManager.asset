@@ -11,6 +11,9 @@ TagManager:
   - Heal
   - Weapons
   - Bullet
+  - general-events
+  - inventario
+  - inventario_com
   layers:
   - Default
   - TransparentFX

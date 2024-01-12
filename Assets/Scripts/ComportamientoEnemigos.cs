@@ -6,7 +6,7 @@ public class EnemyWizard : MonoBehaviour
     public GameObject bulletPrefab;
     public float bulletSpeed = 5f;
     public float timeToDestroyBullet = 4f;
-
+    
     private Transform player;
 
     void Start()
@@ -22,6 +22,9 @@ public class EnemyWizard : MonoBehaviour
             // Start the bullet firing coroutine
             StartCoroutine(FireBullet());
         }
+
+        
+
     }
 
     void Update()
