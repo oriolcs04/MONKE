@@ -10,4 +10,6 @@ public class IsleTemplate : MonoBehaviour
     public GameObject[] rightIsle;
 
     public GameObject closedRoom;
+
+  
 }

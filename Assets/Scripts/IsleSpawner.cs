@@ -18,7 +18,7 @@ public class IsleSpawner : MonoBehaviour
         template = GameObject.FindGameObjectWithTag("Templates").GetComponent<IsleTemplate>();
         if (GameObject.FindGameObjectsWithTag("Reward").Length <= 1)
         {
-            Invoke("SpawnNewIsle", 2f);
+            Invoke("SpawnNewIsle", 0.1f);
         }
         
     }
@@ -62,7 +62,7 @@ public class IsleSpawner : MonoBehaviour
 
     private bool CheckDeadEndOnFirstIsland(GameObject newIsland)
     {
-        return (newIsland.CompareTag("DeadEnd") || newIsland.CompareTag("Reward")) && GameObject.FindGameObjectsWithTag("Isle").Length <= 1;
+        return (newIsland.CompareTag("DeadEnd") || newIsland.CompareTag("Reward")) && GameObject.FindGameObjectsWithTag("Isle").Length <= 4;
     }
 
     private bool CheckSameIsland(GameObject newIsland)
