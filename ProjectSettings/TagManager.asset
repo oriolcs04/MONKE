@@ -11,6 +11,9 @@ TagManager:
   - Heal
   - Weapons
   - Bullet
+  - Isle
+  - IsleSpawner
+  - Templates
   layers:
   - Default
   - TransparentFX
