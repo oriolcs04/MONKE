@@ -11,6 +11,11 @@ TagManager:
   - Heal
   - Weapons
   - Bullet
+  - Isle
+  - IsleSpawner
+  - Templates
+  - DeadEnd
+  - Reward
   layers:
   - Default
   - TransparentFX
