@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class IsleSpawner : MonoBehaviour
@@ -15,7 +16,11 @@ public class IsleSpawner : MonoBehaviour
     private void Start()
     {
         template = GameObject.FindGameObjectWithTag("Templates").GetComponent<IsleTemplate>();
-        Invoke("SpawnNewIsle", 5f);
+        if (GameObject.FindGameObjectsWithTag("Reward").Length <= 1)
+        {
+            Invoke("SpawnNewIsle", 2f);
+        }
+        
     }
 
     void SpawnNewIsle()
@@ -43,12 +48,37 @@ public class IsleSpawner : MonoBehaviour
 
     private void InstantiateSuitableIsle(GameObject[] suitableIsles)
     {
-        rand = UnityEngine.Random.Range(0, suitableIsles.Length);
+        do
+        {
+            rand = UnityEngine.Random.Range(0, suitableIsles.Length);            
+        } while (!CheckIfIslandIsSuitable(suitableIsles[rand]) == false); 
         Instantiate(suitableIsles[rand], transform.position, suitableIsles[rand].transform.rotation);
+    }
+
+    private bool CheckIfIslandIsSuitable(GameObject newIsland)
+    {
+        return CheckSameIsland(newIsland) && CheckDeadEndOnFirstIsland(newIsland);
+    }
+
+    private bool CheckDeadEndOnFirstIsland(GameObject newIsland)
+    {
+        return (newIsland.CompareTag("DeadEnd") || newIsland.CompareTag("Reward")) && GameObject.FindGameObjectsWithTag("Isle").Length <= 1;
+    }
+
+    private bool CheckSameIsland(GameObject newIsland)
+    {
+        return newIsland.gameObject.GetPrefabDefinition() == gameObject.transform.parent.GetPrefabDefinition();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.CompareTag("IsleSpawner"))
+        {
+            if (collision.gameObject.GetComponent<IsleSpawner>().spawned == false && spawned == false)
+            {
+            Instantiate(template.closedRoom, transform.position, Quaternion.identity);
+            }
+        }
         Destroy(gameObject);
     }
 }

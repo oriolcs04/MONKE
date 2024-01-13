@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 6321946832508642572}
   m_Layer: 0
   m_Name: ClosureRoom3
-  m_TagString: Untagged
+  m_TagString: DeadEnd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
