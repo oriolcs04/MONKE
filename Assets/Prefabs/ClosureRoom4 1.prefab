@@ -1202,6 +1202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1731786130832525982}
   - component: {fileID: 2709115632535006951}
+  - component: {fileID: 7041445459901395032}
   m_Layer: 0
   m_Name: ClosureRoom4 1
   m_TagString: DeadEnd
@@ -1271,6 +1272,57 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!68 &7041445459901395032
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575549042924319263}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.7299495, y: -4.5109296}
+  - {x: -1.6878376, y: -4.9639416}
+  - {x: -1.1484382, y: -4.965542}
+  - {x: -1.1344783, y: -3.3618088}
+  - {x: -7.003088, y: -3.3765066}
+  - {x: -6.983261, y: 2.9469385}
+  - {x: 6.9987807, y: 2.9548943}
+  - {x: 7.045843, y: -3.3987358}
+  - {x: 1.1241858, y: -3.3761988}
+  - {x: 1.1671462, y: -4.933472}
+  - {x: 1.6628013, y: -4.911205}
+  - {x: 1.7224791, y: -4.545041}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &2832007654373851892
 GameObject:
   m_ObjectHideFlags: 0
