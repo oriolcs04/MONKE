@@ -1,7 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/den-pixelart-watertiles.png.meta
 guid: e58239c3fc317e041b6cbffc7e159718
 folderAsset: yes
 DefaultImporter:
+========
+guid: 8113036d9fbc10c4688258eda7d0fe22
+PrefabImporter:
+>>>>>>>> 6a53699f6a723ad26743cf23f56228a88fdd7794:Assets/Arco.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

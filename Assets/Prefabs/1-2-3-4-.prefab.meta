@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/1-2-3-4-.prefab.meta
 guid: 7c9292c44757c9046bf13bdced3e0622
+========
+guid: 6b412956feed191469aa589d649817ec
+>>>>>>>> 6a53699f6a723ad26743cf23f56228a88fdd7794:Assets/NPC Merchant-icons-all animations_36.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
