@@ -16,7 +16,7 @@ public class IsleSpawner : MonoBehaviour
     private void Start()
     {
         template = GameObject.FindGameObjectWithTag("Templates").GetComponent<IsleTemplate>();
-        if (GameObject.FindGameObjectsWithTag("Reward").Length <= 1)
+        if (GameObject.FindGameObjectsWithTag("Reward").Length <= 1 || GameObject.FindGameObjectsWithTag("Isle").Length <= 20)
         {
             Invoke("SpawnNewIsle", 0.1f);
         }
@@ -76,7 +76,7 @@ public class IsleSpawner : MonoBehaviour
         {
             if (collision.gameObject.GetComponent<IsleSpawner>().spawned == false && spawned == false)
             {
-            Instantiate(template.closedRoom, transform.position, Quaternion.identity);
+                Instantiate(template.closedRoom, transform.position, Quaternion.identity);
             }
         }
         Destroy(gameObject);
