@@ -13,6 +13,6 @@ public class AttributeController : MonoBehaviour
 
     public int getCantidad()
     {
-        return this.cantidad;
+        return this.cantidad; 
     }
 }
