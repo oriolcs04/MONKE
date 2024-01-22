@@ -2,10 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New EnemyData", menuName = "Enemy")]
-public class Enemy : ScriptableObject
+public class Enemy : MonoBehaviour
 {
-    public int health;
-    public int damage;
+    [SerializeField] EnemyData _enemyData;
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }

@@ -53,12 +53,12 @@ public class VidasP : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Animal"))
             {
-                HurtwithAnimal();
+                HurtwithAnimal(collision.gameObject);
                 Debug.Log("Hurt with Animal");
             }
             else if (collision.gameObject.CompareTag("Mage"))
             {
-                HurtwithMage();
+                HurtwithMage(collision.gameObject);
                 Debug.Log("Hurt with Mage");
             }
             else if (collision.gameObject.CompareTag("Ogre"))
@@ -85,12 +85,12 @@ public class VidasP : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Animal"))
             {
-                HurtwithAnimal();
+                HurtwithAnimal(collision.gameObject);
                 Debug.Log("Hurt with Animal");
             }
             else if (collision.gameObject.CompareTag("Mage"))
             {
-                HurtwithMage();
+                HurtwithMage(collision.gameObject);
                 Debug.Log("Hurt with Mage");
             }
             else if (collision.gameObject.CompareTag("Bullet"))
@@ -132,14 +132,14 @@ public class VidasP : MonoBehaviour
    
     }
 
-    private void HurtwithMage()
+    private void HurtwithMage(GameObject mago)
     {
-        vidas -= 2;
+        vidas -= mago.GetComponent<EnemyData>().damage;
     }
 
-    private void HurtwithAnimal()
+    private void HurtwithAnimal(GameObject animal)
     {
-        vidas -= 1;
+        vidas -= animal.GetComponent<EnemyData>().damage;
     }
 
     private void HurtwithOgre()
