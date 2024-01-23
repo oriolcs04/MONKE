@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 7800012113614187961}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.613693, y: 8.586554, z: -1.024372}
+  m_LocalPosition: {x: 18.791328, y: 0.26643217, z: -1.1247349}
   m_LocalScale: {x: 2.8056667, y: 2.8056667, z: 2.8056667}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -50,6 +50,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyData: {fileID: 11400000, guid: 0b534408b85537a49bb3901a872771c1, type: 2}
+  damage: 0
+  health: 0
 --- !u!212 &174399772275982574
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -190,8 +190,7 @@ MonoBehaviour:
   vidas: 7
   ultimaColl: 
   iFrames: 0
-  tocandoObeliscoCerdo: 1
-  tiempoObeliscoCerdo: 1
+  image: {fileID: 0}
 --- !u!114 &8818285233982803311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 577d53da31bde9c4487f672a3489fe71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 5697293555861102050, guid: 002423fb709fb494b8ce2a49f42b6f94, type: 3}
+  balaPrefab: {fileID: 8124206316034498466, guid: ef258873a4fcdbf44aa8eb7fd5d8f39a, type: 3}
   puntoDeDisparo: {fileID: 7485139852375834893}
   velocidadBala: 10
   tiempoEntreDisparos: 2
