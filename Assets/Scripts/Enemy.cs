@@ -17,9 +17,18 @@ public class Enemy : MonoBehaviour
         health = _enemyData.health;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (health == 0) { 
+            Destroy(gameObject);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            health--;
+            Destroy(collision.gameObject);
+        }
     }
 }

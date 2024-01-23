@@ -2,12 +2,11 @@ using UnityEngine;
 
 public class VidaEnemigo : MonoBehaviour
 {
-    public int vidaInicial = 1; // Vida inicial del enemigo
     private int vidaActual; // Vida actual del enemigo
 
     void Start()
     {
-        vidaActual = vidaInicial;
+        //vidaActual = vidaInicial;
     }
 
     // Método para recibir daño

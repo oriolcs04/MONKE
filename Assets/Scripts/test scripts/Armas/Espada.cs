@@ -37,7 +37,7 @@ public class GolpeDeEspada : MonoBehaviour
         {
             // Aquí puedes agregar lógica adicional si es necesario (por ejemplo, reproducir efectos de sonido, animaciones, etc.)
             // Aplicar daño al enemigo
-            enemigo.GetComponent<VidaEnemigo>().RecibirDanio(danio);
+            enemigo.GetComponent<Enemy>().health--;
         }
 
         // Actualizar el tiempo del último golpe
