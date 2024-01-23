@@ -300,6 +300,7 @@ GameObject:
   - component: {fileID: 987627695615057899}
   - component: {fileID: 4318059265750383271}
   - component: {fileID: 5315693150978847007}
+  - component: {fileID: 4892161917215725104}
   m_Layer: 0
   m_Name: 1-2-3-4-
   m_TagString: Isle
@@ -560,6 +561,54 @@ EdgeCollider2D:
   - {x: -1.6087793, y: 3.660239}
   - {x: -1.5991461, y: 4.8790503}
   - {x: -2.0455976, y: 4.8953805}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!68 &4892161917215725104
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4886954649451760081}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.30296898, y: -1.4714568}
+  - {x: 1.6205969, y: -0.24627554}
+  - {x: 1.6172183, y: 0.38795584}
+  - {x: 0.47412908, y: 1.5230339}
+  - {x: -0.39587784, y: 1.5451674}
+  - {x: -1.6004956, y: 0.37728667}
+  - {x: -1.6211301, y: -0.19659442}
+  - {x: -0.39638567, y: -1.5109642}
+  - {x: 0.37681198, y: -1.5054514}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -1039,7 +1088,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -2367,7 +2416,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
