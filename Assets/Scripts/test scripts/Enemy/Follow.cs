@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SeguirJugador : MonoBehaviour
 {
-    public Transform jugador;
+    private Transform jugador;
     public float velocidad = 3f;
 
     private bool tocado = false;
@@ -15,7 +15,7 @@ public class SeguirJugador : MonoBehaviour
 
     void Update()
     {
-        
+        jugador = GameObject.FindGameObjectWithTag("Player").transform;
         if (jugador != null && !tocado)
         {
             Vector3 direccion = jugador.position - transform.position;

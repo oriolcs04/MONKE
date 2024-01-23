@@ -16,11 +16,12 @@ TagManager:
   - Templates
   - DeadEnd
   - Reward
+  - Feedback
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - mage
   - Water
   - UI
   - 

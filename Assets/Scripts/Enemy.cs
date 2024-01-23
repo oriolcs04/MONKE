@@ -2,10 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New EnemyData", menuName = "Enemy")]
-public class Enemy : ScriptableObject
+public class Enemy : MonoBehaviour
 {
-    public int health;
+    [SerializeField] EnemyData _enemyData;
     public int damage;
+    public int health;
 
+    public static Enemy enemy;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        damage = _enemyData.damage; 
+        health = _enemyData.health;
+    }
+
+    private void Update()
+    {
+        if (health == 0) { 
+            Destroy(gameObject);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            health--;
+            Destroy(collision.gameObject);
+        }
+    }
 }
