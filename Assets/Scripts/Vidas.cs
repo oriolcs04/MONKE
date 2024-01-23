@@ -134,12 +134,12 @@ public class VidasP : MonoBehaviour
 
     private void HurtwithMage(GameObject mago)
     {
-        vidas -= mago.GetComponent<EnemyData>().damage;
+        vidas -= mago.GetComponent<Enemy>().damage;
     }
 
     private void HurtwithAnimal(GameObject animal)
     {
-        vidas -= animal.GetComponent<EnemyData>().damage;
+        vidas -= animal.GetComponent<Enemy>().damage;
     }
 
     private void HurtwithOgre()
