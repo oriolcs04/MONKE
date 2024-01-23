@@ -51,13 +51,7 @@ public class Lanzallamas : MonoBehaviour
         // Detectar enemigos dentro del rango del golpe
         Collider2D[] enemigosGolpeados = Physics2D.OverlapCircleAll(posicionMouse, rangoGolpe, capaEnemigos);
 
-        // Aplicar daño a los enemigos dentro del rango
-        foreach (Collider2D enemigo in enemigosGolpeados)
-        {
-            // Aquí puedes agregar lógica adicional si es necesario (por ejemplo, reproducir efectos de sonido, animaciones, etc.)
-            // Aplicar daño al enemigo
-            enemigo.GetComponent<VidaEnemigo>().RecibirDanio(danio);
-        }
+       
 
         // Actualizar el tiempo del último golpe
         tiempoUltimoGolpe = Time.time;
