@@ -17,6 +17,10 @@ TagManager:
   - DeadEnd
   - Reward
   - Feedback
+  - general-events
+  - inventario
+  - inventario_com
+  - Heart
   layers:
   - Default
   - TransparentFX
@@ -24,7 +28,7 @@ TagManager:
   - mage
   - Water
   - UI
-  - 
+  - pussy
   - 
   - 
   - 

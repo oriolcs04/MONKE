@@ -18,8 +18,8 @@ public class Playermovement : MonoBehaviour
         playerRb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
-        inventario_com = GameObject.FindGameObjectWithTag("inventario_com");
-        inventario_com.SetActive(false);
+        //inventario_com = GameObject.FindGameObjectWithTag("inventario_com");
+        //inventario_com.SetActive(false);
     }
 
     // Update is called once per frame
@@ -32,20 +32,20 @@ public class Playermovement : MonoBehaviour
         animator.SetFloat("PosY", moveY);
 
         //Nuevo
-        if (Input.GetKeyUp(KeyCode.I))
-        {
-            if (!InventoryVisible)
-            {
-                InventoryVisible = true;
-                inventario_com.SetActive(!InventoryVisible);
-                GameObject.FindGameObjectWithTag("general-events").GetComponent<InventoryController>().showInventory();
-            }
-            else
-            {
-                InventoryVisible = false;
-                inventario_com.SetActive(InventoryVisible);
-            }
-        }
+        //if (Input.GetKeyUp(KeyCode.I))
+        //{
+        //    if (!InventoryVisible)
+        //    {
+        //        InventoryVisible = true;
+        //        inventario_com.SetActive(!InventoryVisible);
+        //        GameObject.FindGameObjectWithTag("general-events").GetComponent<InventoryController>().showInventory();
+        //    }
+        //    else
+        //    {
+        //        InventoryVisible = false;
+        //        inventario_com.SetActive(InventoryVisible);
+        //    }
+        //}
  
     }
 
