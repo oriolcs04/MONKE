@@ -9,8 +9,6 @@ public class Playermovement : MonoBehaviour
     private Rigidbody2D playerRb;
     private Vector2 moveInput;
     private Animator animator;
-    private bool InventoryVisible = false;
-    GameObject inventario_com;
 
     // Start is called before the first frame update
     void Start()
@@ -29,24 +27,7 @@ public class Playermovement : MonoBehaviour
         float moveY = Input.GetAxisRaw("Vertical");
         moveInput = new Vector2(moveX, moveY).normalized;
         animator.SetFloat("PosX", moveX);
-        animator.SetFloat("PosY", moveY);
-
-        //Nuevo
-        //if (Input.GetKeyUp(KeyCode.I))
-        //{
-        //    if (!InventoryVisible)
-        //    {
-        //        InventoryVisible = true;
-        //        inventario_com.SetActive(!InventoryVisible);
-        //        GameObject.FindGameObjectWithTag("general-events").GetComponent<InventoryController>().showInventory();
-        //    }
-        //    else
-        //    {
-        //        InventoryVisible = false;
-        //        inventario_com.SetActive(InventoryVisible);
-        //    }
-        //}
- 
+        animator.SetFloat("PosY", moveY); 
     }
 
     private void FixedUpdate()
