@@ -18,9 +18,9 @@ TagManager:
   - Reward
   - Feedback
   - general-events
-  - inventario
-  - inventario_com
   - Heart
+  - EmptySlot
+  - FullSlot
   layers:
   - Default
   - TransparentFX
