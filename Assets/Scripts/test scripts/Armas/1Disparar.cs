@@ -5,7 +5,7 @@ public class ControladorDisparo : MonoBehaviour
     public GameObject balaPrefab; // Prefab de la bala
     public Transform puntoDeDisparo; // Punto desde el cual se disparará la bala
     public float velocidadBala = 10f; // Velocidad de la bala
-    public float tiempoEntreDisparos = 1f; // Tiempo entre disparos
+    public float tiempoEntreDisparos = 0.75f; // Tiempo entre disparos
     private float tiempoUltimoDisparo; // Tiempo del último disparo
 
     void Update()

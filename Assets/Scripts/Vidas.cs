@@ -1,6 +1,9 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class VidasP : MonoBehaviour
@@ -12,12 +15,15 @@ public class VidasP : MonoBehaviour
     private int framesInvencivilidad;
 
     public GameObject image;
+    public List<GameObject> lifes;
  
     void Start()
     {
         vidas = 7;
         ultimaColl = null;
         framesInvencivilidad = 0;
+
+        lifes = GameObject.FindGameObjectsWithTag("Heart").ToList();
     }
 
  
@@ -72,27 +78,39 @@ public class VidasP : MonoBehaviour
     private void HurtwithMage(GameObject mago)
     {
         vidas -= mago.GetComponent<Enemy>().damage;
-        ShowFeedback();
+        ShowFeedback(mago.GetComponent<Enemy>().damage);
     }
 
 
     private void HurtwithAnimal(GameObject animal)
     {
         vidas -= animal.GetComponent<Enemy>().damage;
-        ShowFeedback();
+        ShowFeedback(animal.GetComponent<Enemy>().damage);
     }
 
     private void Hurt()
     {
         vidas -= 1;
-        ShowFeedback();
+        ShowFeedback(1);
     }
 
-    private void ShowFeedback()
+    private void ShowFeedback(int damage)
     {
-        image = GameObject.FindGameObjectWithTag("Feedback");
-        image.gameObject.GetComponent<Image>().enabled = true;
-        StartCoroutine(HoldeaBbsita());
+        if (vidas > 0)
+        {
+            image = GameObject.FindGameObjectWithTag("Feedback");
+            image.gameObject.GetComponent<Image>().enabled = true;
+            for (int i = 0; i < damage; i++)
+            {
+                lifes.ElementAt(0).gameObject.SetActive(false);
+                lifes.RemoveAt(0);
+            }
+            StartCoroutine(HoldeaBbsita());
+        }
+        else 
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 
     public IEnumerator HoldeaBbsita()
