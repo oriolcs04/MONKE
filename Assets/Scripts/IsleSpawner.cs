@@ -57,7 +57,7 @@ public class IsleSpawner : MonoBehaviour
 
     private bool CheckIfIslandIsSuitable(GameObject newIsland)
     {
-        return CheckSameIsland(newIsland) && CheckDeadEndOnFirstIsland(newIsland);
+        return CheckDeadEndOnFirstIsland(newIsland);
     }
 
     private bool CheckDeadEndOnFirstIsland(GameObject newIsland)
@@ -65,10 +65,7 @@ public class IsleSpawner : MonoBehaviour
         return (newIsland.CompareTag("DeadEnd") || newIsland.CompareTag("Reward")) && GameObject.FindGameObjectsWithTag("Isle").Length <= 4;
     }
 
-    private bool CheckSameIsland(GameObject newIsland)
-    {
-        return newIsland.gameObject.GetPrefabDefinition() == gameObject.transform.parent.GetPrefabDefinition();
-    }
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
